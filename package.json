@@ -1,0 +1,62 @@
+{
+  "name": "@nyvoru/eslint-config",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.33.2",
+  "description": "Opinionated ESLint config for Nyvoru Vue and Nuxt projects",
+  "author": "Nyvoru",
+  "license": "MIT",
+  "homepage": "https://github.com/nyvoru/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyvoru/eslint-config.git"
+  },
+  "bugs": "https://github.com/nyvoru/eslint-config/issues",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "vue",
+    "nuxt",
+    "antfu"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "@antfu/eslint-config": "^8.0.0",
+    "eslint": "^10.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^8.2.0",
+    "@types/node": "^24.0.0",
+    "bumpp": "^11.0.0",
+    "eslint": "^10.3.0",
+    "typescript": "^6.0.0",
+    "unbuild": "^3.6.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
