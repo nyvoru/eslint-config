@@ -26,8 +26,4 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      # Temporary: bootstrap NPM_TOKEN auth for v0.1.0. After Trusted Publisher
-      # is configured on npmjs.com, drop the env block and the repo secret.
       - run: pnpm publish --provenance --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
