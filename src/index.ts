@@ -13,17 +13,14 @@ const code: TypedFlatConfigItem = {
 
     // Quote every key in an object or none, never a mix.
     'style/quote-props': ['error', 'consistent'],
-
-    // Allows one-line guards like `if (x) { return }`.
-    'style/max-statements-per-line': 'off',
   },
 }
 
 const tests: TypedFlatConfigItem = {
   files: ['**/*.spec.ts'],
   rules: {
-    // Allow sentence-case test titles.
-    'test/prefer-lowercase-title': 'off',
+    // Lowercase `it`/`test` titles, but allow PascalCase suite names in `describe`.
+    'test/prefer-lowercase-title': ['error', { ignore: ['describe'] }],
   },
 }
 

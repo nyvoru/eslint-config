@@ -62,13 +62,12 @@ so a future Antfu default flip cannot change them silently.
 | `curly` | `['error', 'all']` | Always wrap branches in braces |
 | `style/space-before-function-paren` | `['error', 'always']` | `function foo ()` |
 | `style/quote-props` | `['error', 'consistent']` | Quote every key or none |
-| `style/max-statements-per-line` | `'off'` | Allows `if (x) { return }` |
 
 ### Tests (`**/*.spec.ts`)
 
 | Rule | Setting | Effect |
 | --- | --- | --- |
-| `test/prefer-lowercase-title` | `'off'` | Allow sentence-case test titles |
+| `test/prefer-lowercase-title` | `['error', { ignore: ['describe'] }]` | Lowercase `it`/`test` titles, allow PascalCase in `describe` |
 
 ### Markdown (`**/*.md/**`)
 
