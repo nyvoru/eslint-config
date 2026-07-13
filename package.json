@@ -52,7 +52,7 @@
     "@types/node": "^25.6.0",
     "bumpp": "^11.0.0",
     "eslint": "^10.3.0",
-    "typescript": "^6.0.0",
+    "typescript": "^7.0.2",
     "unbuild": "^3.6.0"
   },
   "publishConfig": {
