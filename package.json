@@ -50,7 +50,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^9.5.1",
     "@types/node": "^26.5.0",
-    "bumpp": "^11.0.0",
+    "bumpp": "^12.3.0",
     "eslint": "^10.10.0",
     "typescript": "^6.0.0",
     "unbuild": "^3.6.0"
