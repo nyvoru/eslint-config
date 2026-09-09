@@ -9,6 +9,11 @@ updates:
       timezone: Europe/Stockholm
     commit-message:
       prefix: build(deps)
+    ignore:
+      # Vue language tools and typed ESLint rules need the TypeScript 6 compiler API. Revisit with TypeScript 7.1.
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
     groups:
       eslint:
         patterns:
