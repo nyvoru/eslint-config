@@ -2,7 +2,7 @@
   "name": "@nyvoru/eslint-config",
   "type": "module",
   "version": "0.2.0",
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@12.3.4",
   "description": "Opinionated ESLint config for Nyvoru Vue and Nuxt projects",
   "author": "Nyvoru",
   "license": "MIT",
