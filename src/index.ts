@@ -5,8 +5,15 @@ export type { Awaitable, OptionsConfig, TypedFlatConfigItem }
 
 const code: TypedFlatConfigItem = {
   rules: {
-    // Always wrap branches in braces. Restores the "goto fail" safety net.
-    'curly': ['error', 'all'],
+    // Braces everywhere, except a single statement kept on the same line: `if (!x) return`.
+    // Branches of one chain must agree.
+    'curly': ['error', 'multi-line', 'consistent'],
+
+    // A braced block never fits on one line, so `if (x) { return }` becomes three lines.
+    'style/brace-style': ['error', 'stroustrup', { allowSingleLine: false }],
+
+    // Antfu moves a brace-less body to the next line, where curly would wrap it again.
+    'antfu/if-newline': 'off',
 
     // One space-before-paren rule across every function form.
     'style/space-before-function-paren': ['error', 'always'],

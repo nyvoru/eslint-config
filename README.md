@@ -2,7 +2,7 @@
 
 Opinionated ESLint config for Nyvoru Vue and Nuxt projects. Wraps
 [@antfu/eslint-config](https://github.com/antfu/eslint-config) with a
-small set of overrides: no semicolons, single quotes, always braces,
+small set of overrides: no semicolons, single quotes, braces except for one-line statements,
 and a few stylistic tweaks aligned with the Vue Core and Nuxt Core
 repos.
 
@@ -59,7 +59,9 @@ so a future Antfu default flip cannot change them silently.
 
 | Rule | Setting | Effect |
 | --- | --- | --- |
-| `curly` | `['error', 'all']` | Always wrap branches in braces |
+| `curly` | `['error', 'multi-line', 'consistent']` | Braces everywhere, except a single statement kept on the same line |
+| `style/brace-style` | `['error', 'stroustrup', { allowSingleLine: false }]` | A braced block never stays on one line |
+| `antfu/if-newline` | `'off'` | Keeps `if (!x) return` on one line |
 | `style/space-before-function-paren` | `['error', 'always']` | `function foo ()` |
 | `style/quote-props` | `['error', 'consistent']` | Quote every key or none |
 
